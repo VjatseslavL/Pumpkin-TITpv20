@@ -1,0 +1,144 @@
+body, html {
+    background: radial-gradient(ellipse at center, #461a1a 0%,#160909 45%,#291111 100%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.pumpkin .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pumpkin {
+    animation-name: move;
+    animation-delay: 2s;
+    animation-duration: 10s;
+    animation: move 3s infinite;
+    background: #f68632;
+    display: flex;
+    justify-content: center;
+    width: 240px;
+    height: 190px;
+    margin: 0px;
+    position: relative;
+    border-radius: 90px;
+    border-radius: 70%/110%;
+    box-shadow: inset 0 0px 20px #a14907, 0 0 30px -4px red;
+
+}
+
+.texture {
+    height: 94.5%;
+    width: 6.5em;
+    position: absolute;
+    bottom: -0.4em;
+    left: 4em;
+    border-radius: 70%/130%;
+    border-bottom: 0.5em solid #a14907;
+    border-top: 0.5em solid #a14907;
+    
+}
+
+.pumpkin .texture::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 12em;
+    position: absolute;
+    bottom: -0.4em;
+    left: -2.5em;
+    border-radius: 70%/130%;
+    border-bottom: 0.5em solid #a14907;
+    border-top: 0.5em solid #a14907;
+}
+
+
+.pumpkin .eyeleft {
+    position: absolute;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    margin: 50px 0px 0px -90px;
+    background: black;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.pumpkin .eyeright {
+    position: absolute;
+    margin: 50px 0px 0px 90px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background: black;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.pumpkin .mouth {
+    position: absolute;
+    background-color: black;
+    border-radius: 0px 0px 20px 20px;
+    width: 140px;
+    height: 10px;
+    padding: 10px;
+    margin: 120px;
+}
+
+.pumpkin .teeth {
+    background: #f68632;
+    position: absolute;
+    padding: 10px 20px 15px 10px;
+    margin: 110px 10px 10px -50px;
+    clip-path: polygon(51% 100%, 0 0, 100% 0);
+}
+
+.root {
+    background: #517f54;
+    height: 2.8em;
+    width: 1.25em;
+    position: absolute;
+    left: calc(7.5em - 0.625em);
+    top: -2.7em;
+    transform: rotate(5deg);
+    border-radius: 30% 20% 70% 10%;
+    z-index: -1;
+    box-shadow: inset 0 0px 10px #29412b;
+  }
+
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+  }
+
+  .shadow {
+    margin: 10% auto 0;
+    background: #000;
+    width: 230px;
+    height: 50px;
+    border-radius: 50%;
+    animation: zoom 3s infinite;
+  }
+
+  @keyframes root01 {
+      0% {
+          position: fixed;
+          display: block;
+          background: #a14907;
+      }
+
+      100% {
+          position: fixed;
+          display: block;
+          background: red;
+      }
+  }
